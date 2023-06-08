@@ -1,3 +1,26 @@
+.board {
+  background-color: green;
+  width: 640px;
+  height: 640px;
+  font-size: 0;
+}
+
+.cell {
+  border: solid 1px black;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  max-width: 640px;
+}
+
+.stone {
+  width: 56px;
+  height: 56px;
+  background-color: white;
+  border-radius: 100%;
+  margin: 12px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
