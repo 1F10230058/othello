@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './index.module.css';
+import { Cell } from '../Cell';
 
 const Home = () => {
   const [turnColor, setTurnColor] = useState(1);
@@ -31,7 +32,7 @@ const Home = () => {
       for (const [wy, wx] of way) {
         if (
           board[y + wy] !== undefined &&
-          board[y + wy][x + wx] !== undefined &&
+          board[x + wx] !== undefined &&
           board[y + wy][x + wx] === 3 - turnColor
         ) {
           for (let s = 1; s < 8; s++) {
@@ -73,14 +74,7 @@ const Home = () => {
       <div className={styles.board}>
         {board.map((row, y) =>
           row.map((color, x) => (
-            <div className={styles.cell} key={`${x}-${y}`} onClick={() => onClick(x, y)}>
-              {color !== 0 && (
-                <div
-                  className={styles.stone}
-                  style={{ background: color === 1 ? '#000' : '#fff' }}
-                />
-              )}
-            </div>
+            <Cell key={`${x}-${y}`} color={color} onClick={()=>onClick(x,y)}/>
           ))
         )}
       </div>
