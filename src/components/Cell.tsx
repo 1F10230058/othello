@@ -1,4 +1,4 @@
-import styles from './cell.module.css';
+import styles from '../cell.module.css';
 
 export const Cell = (props: { color: number; onClick: () => void }) => {
   return (

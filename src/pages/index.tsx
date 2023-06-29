@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Cell } from '../Cell';
+import { Cell } from '../components/Cell';
 import styles from './index.module.css';
 
 const Home = () => {
